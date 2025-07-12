@@ -1,81 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Position</title>
-    <style>
-        .box{
-            border: 2px dotted plum;
-            width: 200px;
-        }
-        /* .ring {
-            position: relative;
-           
-            left: 50px;
-        } */
-         /* .ring {
-            position: absolute;
-            left: 50px;
-            top: 20px;
-         } */
-          .ring {
-            position: sticky;
-            top: 0;
-           }
-          .dumy {
-            border: 1px solid peru;
-            width: 200px;
-            height: 200px;
-           }
-           .another{
-            border: 2px solid green;
-           }
 
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Position</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f5f9ff;
+      color: #333;
+    }
+
+    /* Navigation styling */
+    nav {
+      background-color: #004d99;
+      padding: 12px 0;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff9900;
+      color: black;
+    }
+
+    /* Heading */
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004d99;
+      font-size: 28px;
+      letter-spacing: 1.1px;
+    }
+
+    /* Ordered list */
+    ol {
+      max-width: 350px;
+      margin: 0 auto 40px auto;
+      padding-left: 20px;
+      font-weight: 600;
+      color: #004d99;
+      font-size: 18px;
+    }
+
+    /* Swim container styling */
+    .swim-container {
+      max-width: 400px;
+      margin: 0 auto 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    /* Boxes */
+    .box {
+      border: 2px dotted plum;
+      width: 200px;
+      padding: 10px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Position examples */
+    .ring {
+      position: sticky;
+      top: 0;
+      background-color: #ffe6cc;
+      border-color: #ffb84d;
+      z-index: 1000;
+    }
+
+    /* Dummy boxes */
+    .dumy {
+      border: 1px solid peru;
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      background-color: #fafafa;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #999;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    /* Another container */
+    .another {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 15px;
+      border: 2px solid green;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      background-color: #e6ffe6;
+    }
+  </style>
 </head>
+
 <body>
-    <h3>Css Position</h3>
-    <ol>
-        <li>Static</li>
-        <li>Relative</li>
-        <li>Absolute</li>
-        <li>Fixed</li>
-        <li>Sticky</li>
-    </ol>
-    <div class="swim-container">
-      <div class="box boy">
-        <img src="swim/boy.svg" alt="">
+
+  <nav>
+    <ul>
+      <li><a href="pseudo.html">Home</a></li>
+      <li><a href="about-pages.html">About</a></li>
+      <li><a href="position.html">Services</a></li>
+      <li><a href="z_axis.html">Contact</a></li>
+      <li><a href="pseudo_elements.html">Pseudo_elements</a></li>
+    </ul>
+  </nav>
+
+  <h3>CSS Position</h3>
+
+  <ol>
+    <li>Static</li>
+    <li>Relative</li>
+    <li>Absolute</li>
+    <li>Fixed</li>
+    <li>Sticky</li>
+  </ol>
+
+  <div class="swim-container">
+    <div class="box boy">
+      <img src="swim/boy.svg" alt="Boy Image" />
+      <p>Boy (static/default)</p>
     </div>
-      <div class="box ring">
-        <img src="swim/ring.svg" alt="">
+    <div class="box ring">
+      <img src="swim/ring.svg" alt="Ring Image" />
+      <p>Ring (sticky)</p>
     </div>
-      <div class="box water">
-        <img src="swim/water.svg" alt="">
+    <div class="box water">
+      <img src="swim/water.svg" alt="Water Image" />
+      <p>Water (default)</p>
     </div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    <div class="dumy"></div>
-    </div>
-    <div class="another">
-        <div class="dumy"></div>
-        <div class="dumy"></div>
-        <div class="dumy"></div>
-        <div class="dumy"></div>
-        <div class="dumy"></div>
-    </div>
-    
+
+    <!-- Dummy boxes for spacing and scrolling -->
+    <div class="dumy">Dummy 1</div>
+    <div class="dumy">Dummy 2</div>
+    <div class="dumy">Dummy 3</div>
+    <div class="dumy">Dummy 4</div>
+    <div class="dumy">Dummy 5</div>
+    <div class="dumy">Dummy 6</div>
+    <div class="dumy">Dummy 7</div>
+    <div class="dumy">Dummy 8</div>
+    <div class="dumy">Dummy 9</div>
+    <div class="dumy">Dummy 10</div>
+    <div class="dumy">Dummy 11</div>
+    <div class="dumy">Dummy 12</div>
+    <div class="dumy">Dummy 13</div>
+    <div class="dumy">Dummy 14</div>
+    <div class="dumy">Dummy 15</div>
+    <div class="dumy">Dummy 16</div>
+  </div>
+
+  <div class="another">
+    <div class="dumy">Dummy A</div>
+    <div class="dumy">Dummy B</div>
+    <div class="dumy">Dummy C</div>
+    <div class="dumy">Dummy D</div>
+    <div class="dumy">Dummy E</div>
+  </div>
+
 </body>
+
 </html>

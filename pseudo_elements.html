@@ -2,22 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pseudo_elements</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements Demo</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        /* Pseudo-elements Styling */
+        h3 {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        h3::before {
+            content: "start - ";
+            color: #c00606;
+            font-weight: bold;
+        }
+
         h3::after {
             content: ".pdf";
             color: #c0c006;
         }
-        h3::before {
-            content: "start -";
-            color: #c00606;
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-left: 5px solid #007acc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
         }
+
         p::first-letter {
             font-size: 2em;
             color: #c00606;
         }
+
         p::first-line {
             font-weight: bold;
             background-color: aquamarine;
@@ -26,16 +91,30 @@
 </head>
 
 <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="pseudo.html">Home</a></li>
+            <li><a href="about-pages.html">About</a></li>
+            <li><a href="position.html">Services</a></li>
+            <li><a href="z_axis.html">Contact</a></li>
+            <li><a href="pseudo_elements.html">Pseudo Elements</a></li>
+        </ul>
+    </nav>
+
+    <!-- Headings -->
     <h3>heading -1</h3>
     <h3>heading -2</h3>
     <h3>heading -3</h3>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus error vero nesciunt? Consequuntur quis suscipit fugiat quos nesciunt culpa.</p>
-    <p>Praesentium assumenda modi reiciendis enim maiores quas, voluptatum eius temporibus quod repellendus numquam eaque maxime ad officiis voluptate sapiente accusamus.</p>
-    <p>Reiciendis, voluptates nemo quia totam adipisci sapiente cumque magnam nesciunt repudiandae dolor, dolorem sequi earum fugit. Veniam officiis possimus modi?</p>
-
-
-
+    <!-- Paragraphs -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore repellendus error vero nesciunt? Consequuntur
+        quis suscipit fugiat quos nesciunt culpa.</p>
+    <p>Praesentium assumenda modi reiciendis enim maiores quas, voluptatum eius temporibus quod repellendus numquam
+        eaque maxime ad officiis voluptate sapiente accusamus.</p>
+    <p>Reiciendis, voluptates nemo quia totam adipisci sapiente cumque magnam nesciunt repudiandae dolor, dolorem sequi
+        earum fugit. Veniam officiis possimus modi?</p>
 
 </body>
 
