@@ -2,45 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pseudo</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav ul li {
+            margin: 0 20px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav ul li a:hover {
+            color: orange;
+        }
+
         h3 {
             color: blue;
             font-size: 24px;
+            transition: all 0.3s ease;
         }
 
-       h3:hover{
-
+        h3:hover {
             color: red;
             background-color: yellow;
-       }
-       input :focus{
-        color:green;
-        outline: 0px;
-        border: 1px solid blue;
-        padding: 10px;
-       }
-       a {
+            padding: 5px;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            color: green;
+            border: 2px solid blue;
+            outline: none;
+            background-color: #eef9ff;
+        }
+
+        a {
             text-decoration: none;
             color: black;
+            margin-right: 15px;
         }
 
         a:hover {
             color: orange;
             font-weight: bold;
         }
-        
-        input[type="text"] {
-            width: 200px;
-            padding: 5px;
-            margin: 10px 0;
-        }
+
         a:visited {
             color: purple;
         }
-        li:last-child {
+
+        ul.name-list {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        ul.name-list li {
+            padding: 5px 0;
+        }
+
+        ul.name-list li:last-child {
             color: red;
             font-weight: bold;
         }
@@ -48,21 +103,37 @@
 </head>
 
 <body>
-    <h3>My Heading </h3>
-    <input type="text" >
-    <input type="text" >
-    <a href="https://gemini.google.com/app">gemini</a>
-    <a href="https://www.y2down.app/">download</a>
 
-    <ul>
-        <li>alia</li>
-        <li>jamila</li>
-        <li>kaliya</li>
-        <li>sumaiya</li>
-        <li>sume</li>
-        <li>hasan</li>
-        <li>mezan</li>
-    </li>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-pages.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <h3>My Heading</h3>
+
+    <input type="text" placeholder="Enter your name" />
+    <br />
+    <input type="text" placeholder="Enter your email" />
+    <br />
+
+    <a href="https://gemini.google.com/app" target="_blank">Gemini</a>
+    <a href="https://www.y2down.app/" target="_blank">Download</a>
+
+    <ul class="name-list">
+        <li>Alia</li>
+        <li>Jamila</li>
+        <li>Kaliya</li>
+        <li>Sumaiya</li>
+        <li>Sume</li>
+        <li>Hasan</li>
+        <li>Mezan</li>
     </ul>
 
 </body>
